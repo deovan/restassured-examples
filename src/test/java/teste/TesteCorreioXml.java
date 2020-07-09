@@ -2,11 +2,7 @@ package teste;
 
 import modelo.correio.CServico;
 import org.junit.jupiter.api.Test;
-import org.xml.sax.SAXException;
 
-import javax.xml.bind.JAXBException;
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TesteCorreioXml {
 
     @Test
-    public void validaResponseCEP() throws JAXBException, IOException, ParserConfigurationException, JAXBException, SAXException {
+    public void validaResponseCEP() {
 
         String soapBody = "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\">"
                 + "<soapenv:Header/>"
