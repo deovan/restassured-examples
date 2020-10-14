@@ -31,6 +31,7 @@ public class TesteCorreioXml {
 
         CServico response =
                 given().request().headers(authhdrs)
+                        .redirects().follow(false)
                         .contentType("text/xml; charset=utf-8;").body(soapBody)
                         .when().post("http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx")
                         .andReturn()

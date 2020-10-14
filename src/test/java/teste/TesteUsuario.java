@@ -149,7 +149,10 @@ public class TesteUsuario {
         given()
                 .contentType("application/xml").body(resposta)
                 .expect().statusCode(200)
-                .when().delete("/leiloes/deletar").andReturn().asString();
+                .when()
+                .delete("/leiloes/deletar")
+                .andReturn()
+                .asString();
 
     }
 
